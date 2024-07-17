@@ -5,7 +5,7 @@ export const useAppStore = defineStore('app', () => {
     search.value = str;
   };
 
-  const getSearch = computed(() => {
+  const getSearch = computed((): string => {
     return search.value;
   });
 

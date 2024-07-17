@@ -3,8 +3,8 @@ export type CartItem = {
   dough: number;
   size: string;
   count: number;
+  price: number;
   topings?: number[];
-  price?: number;
 };
 
 export type Cart = {

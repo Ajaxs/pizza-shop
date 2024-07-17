@@ -28,14 +28,18 @@ const items = computed((): Cart => {
       cartItems[key].topings,
     );
   }
-
   return cartItems;
 });
 
-const fullPrice = computed(() => {
+const fullPrice = computed((): number => {
   return Object.values(items.value).reduce((sum, item) => {
     return sum + item.price * item.count;
   }, 0);
+});
+
+useHead({
+  title: 'Корзина',
+  meta: [{ name: 'description', content: 'Отличный магазин пиццы' }],
 });
 </script>
 

@@ -3,12 +3,12 @@ import type { PizzaToping } from '@@/types/Pizza';
 export const useTopingsStore = defineStore('topings', () => {
   const topings = ref<PizzaToping[]>([]);
 
-  async function fetchTopings() {
+  const fetchTopings = async (): Promise<void> => {
     const { data } = await useFetch<PizzaToping[]>(`/api/topings`);
     if (data.value !== null) {
       topings.value = data.value;
     }
-  }
+  };
 
   const getTopingById = computed(() => (id: number) => {
     return topings.value.find((item) => item.id === id) ?? null;

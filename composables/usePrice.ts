@@ -15,7 +15,7 @@ export const usePrice = () => {
     dough: number,
     size: string,
     topings: number[] = [],
-  ) => {
+  ): number => {
     const { getPizzasById } = usePizzasStore();
     const pizza = getPizzasById(id);
 

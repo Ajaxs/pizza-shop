@@ -51,7 +51,6 @@ const pizzasFiltred = computed(() => {
       );
     });
   }
-  //return appStore.search;
   return pizzas;
 });
 

@@ -1,3 +1,3 @@
 <template>
-  <div>Contact</div>
+  <h1>Скидки</h1>
 </template>

@@ -1,4 +1,4 @@
-import { PizzaIngredient } from '@/types/Pizza';
+import { PizzaIngredient } from '@@/types/Pizza';
 
 export default defineEventHandler(async (event) => {
   const ingredients: PizzaIngredient[] = [
